@@ -1,85 +1,85 @@
-:root {
-    /* Light Mode Colors */
-    --lt-background: #F9FAFB;
-    --lt-primary-text: #1F2937;
-    --lt-secondary-text: #6B7280;
-    --lt-button-link: #5048E5;
-    --lt-hover: #463ACB;
-    --lt-border: #E5E7EB;
-    --lt-card-background: #FFFFFF;
+@import 'tailwindcss';
 
-    /* Dark Mode Colors */
-    --dt-background: #111827;
-    --dt-primary-text: #F3F4F6;
-    --dt-secondary-text: #9CA3B0;
-    --dt-button-link: #6467F2;
-    --dt-hover: #828DF8;
-    --dt-border: #384252;
-    --dt-card-background: #1F2937;
+:root {
+	/* Light Mode Colors */
+	--lt-background: #f9fafb;
+	--lt-primary-text: #1f2937;
+	--lt-secondary-text: #6b7280;
+	--lt-button-link: #5048e5;
+	--lt-hover: #463acb;
+	--lt-border: #e5e7eb;
+	--lt-card-background: #ffffff;
+
+	/* Dark Mode Colors */
+	--dt-background: #111827;
+	--dt-primary-text: #f3f4f6;
+	--dt-secondary-text: #9ca3b0;
+	--dt-button-link: #6467f2;
+	--dt-hover: #828df8;
+	--dt-border: #384252;
+	--dt-card-background: #1f2937;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 /* Hero Heading */
 .hero-heading {
-    font-family: "Poppins", sans-serif;
-    font-size: 3rem;
-    font-weight: 700;
-    font-style: normal;
-    line-height: 1.5;
-  }
-  
-  /* Section Headings */
-  .section-heading {
-    font-family: "Poppins", sans-serif;
-    font-size: 2rem;
-    font-weight: 600;
-    font-style: normal;
-    line-height: 1.5;
-  }
-  
-  /* Subheading */
-  .subheading {
-    font-family: "Poppins", sans-serif;
-    font-size: 1.5rem;
-    font-weight: 500;
-    font-style: normal;
-    line-height: 1.5;
-  }
-  
-  /* Project Titles */
-  .project-title {
-    font-family: "Poppins", sans-serif;
-    font-size: 1.25rem;
-    font-weight: 600;
-    font-style: normal;
-    line-height: 1.5;
-  }
-  
-  /* Normal Text */
-  .normal-text {
-    font-family: "Roboto", sans-serif;
-    font-size: 1rem;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
-    line-height: 1.5;
-  }
-  
-  /* Caption Text */
-  .caption {
-    font-family: "Roboto", sans-serif;
-    font-size: 0.875rem;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
-    line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+	font-size: 3rem;
+	font-weight: 700;
+	font-style: normal;
+	line-height: 1.5;
+}
+
+/* Section Headings */
+.section-heading {
+	font-family: 'Poppins', sans-serif;
+	font-size: 2rem;
+	font-weight: 600;
+	font-style: normal;
+	line-height: 1.5;
+}
+
+/* Subheading */
+.subheading {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.5rem;
+	font-weight: 500;
+	font-style: normal;
+	line-height: 1.5;
+}
+
+/* Project Titles */
+.project-title {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.25rem;
+	font-weight: 600;
+	font-style: normal;
+	line-height: 1.5;
+}
+
+/* Normal Text */
+.normal-text {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1rem;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings: 'wdth' 100;
+	line-height: 1.5;
+}
+
+/* Caption Text */
+.caption {
+	font-family: 'Roboto', sans-serif;
+	font-size: 0.875rem;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings: 'wdth' 100;
+	line-height: 1.5;
 }

@@ -1,10 +1,11 @@
-import { ThemeProvider } from './components/ThemeProvider';
+import { ThemeProvider } from './providers/ThemeProvider';
+import { NavBar } from './components/NavBar'
 
 function App() {
 	return (
 		<ThemeProvider>
-			<div className="bg-background min-h-screen">
-				<h1 className="hero-heading text-primary-text">Hi, I'm Santiago</h1>
+			<div className="bg-background min-h-screen w-screen">
+				<NavBar />
 			</div>
 		</ThemeProvider>
 	);

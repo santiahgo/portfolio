@@ -1,24 +1,56 @@
 @import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
 
-:root {
-	/* Light Mode Colors */
-	--lt-background: #f9fafb;
-	--lt-primary-text: #1f2937;
-	--lt-secondary-text: #6b7280;
-	--lt-button-link: #5048e5;
-	--lt-hover: #463acb;
-	--lt-border: #e5e7eb;
-	--lt-card-background: #ffffff;
-
-	/* Dark Mode Colors */
-	--dt-background: #111827;
-	--dt-primary-text: #f3f4f6;
-	--dt-secondary-text: #9ca3b0;
-	--dt-button-link: #6467f2;
-	--dt-hover: #828df8;
-	--dt-border: #384252;
-	--dt-card-background: #1f2937;
+@theme inline {
+	--color-background: var(--background);
+	--color-primary-text: var(--primary-text);
+	--color-secondary-text: var(--secondary-text);
+	--color-button-link: var(--button-link);
+	--color-hover: var(--hover);
+	--color-border: var(--border);
+	--color-card-background: var(--card-background);
 }
+
+[data-theme='dark'] {
+  --background: #111827;
+	--primary-text: #f3f4f6;
+	--secondary-text: #9ca3b0;
+	--button-link: #6467f2;
+	--hover: #828df8;
+	--border: #384252;
+	--card-background: #1f2937; 
+}
+
+[data-theme='light'] {
+  --background: #f9fafb;
+  --primary-text: #1f2937;
+  --secondary-text: #6b7280;
+  --button-link: #5048e5;
+  --hover: #463acb;
+  --border: #e5e7eb;
+  --card-background: #ffffff;
+}
+
+
+/*
+  Light Mode Colors
+	--color-background-light: #f9fafb;
+	--color-primary-text-light: #1f2937;
+	--color-secondary-text-light: #6b7280;
+	--color-button-link-light: #5048e5;
+	--color-hover-light: #463acb;
+	--color-border-light: #e5e7eb;
+	--color-card-background-light: #ffffff;
+
+  Dark Mode Colors
+	--color-background-dark: #111827;
+	--color-primary-text-dark: #f3f4f6;
+	--color-secondary-text-dark: #9ca3b0;
+	--color-button-link-dark: #6467f2;
+	--color-hover-dark: #828df8;
+	--color-border-dark: #384252;
+	--color-card-background-dark: #1f2937; 
+  */
 
 * {
 	margin: 0;
@@ -26,7 +58,7 @@
 	box-sizing: border-box;
 }
 
-/* Hero Heading */
+/* Hero Heading (h1) */
 .hero-heading {
 	font-family: 'Poppins', sans-serif;
 	font-size: 3rem;
@@ -35,7 +67,7 @@
 	line-height: 1.5;
 }
 
-/* Section Headings */
+/* Section Headings (h2) */
 .section-heading {
 	font-family: 'Poppins', sans-serif;
 	font-size: 2rem;
@@ -44,7 +76,7 @@
 	line-height: 1.5;
 }
 
-/* Subheading */
+/* Subheading (h3) */
 .subheading {
 	font-family: 'Poppins', sans-serif;
 	font-size: 1.5rem;
@@ -53,7 +85,7 @@
 	line-height: 1.5;
 }
 
-/* Project Titles */
+/* Project Titles (h4) */
 .project-title {
 	font-family: 'Poppins', sans-serif;
 	font-size: 1.25rem;
@@ -62,7 +94,7 @@
 	line-height: 1.5;
 }
 
-/* Normal Text */
+/* Normal Text (p, span) */
 .normal-text {
 	font-family: 'Roboto', sans-serif;
 	font-size: 1rem;
@@ -73,7 +105,7 @@
 	line-height: 1.5;
 }
 
-/* Caption Text */
+/* Caption Text (p, span) */
 .caption {
 	font-family: 'Roboto', sans-serif;
 	font-size: 0.875rem;

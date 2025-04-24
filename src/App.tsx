@@ -1,14 +1,13 @@
-import { useState } from 'react'
+import { ThemeProvider } from './components/ThemeProvider';
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <>
-      <p className='hero-heading'>{count}</p>
-      <button type='button' onClick={() => setCount(count + 1)}>Increment</button>
-    </>
-  )
+	return (
+		<ThemeProvider>
+			<div className="bg-background min-h-screen">
+				<h1 className="hero-heading text-primary-text">Hi, I'm Santiago</h1>
+			</div>
+		</ThemeProvider>
+	);
 }
 
-export default App
+export default App;

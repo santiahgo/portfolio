@@ -12,45 +12,24 @@
 }
 
 [data-theme='dark'] {
-  --background: #111827;
+	--background: #111827;
 	--primary-text: #f3f4f6;
 	--secondary-text: #9ca3b0;
 	--button-link: #6467f2;
 	--hover: #828df8;
 	--border: #384252;
-	--card-background: #1f2937; 
+	--card-background: #1f2937;
 }
 
 [data-theme='light'] {
-  --background: #f9fafb;
-  --primary-text: #1f2937;
-  --secondary-text: #6b7280;
-  --button-link: #5048e5;
-  --hover: #463acb;
-  --border: #e5e7eb;
-  --card-background: #ffffff;
+	--background: #f9fafb;
+	--primary-text: #1f2937;
+	--secondary-text: #6b7280;
+	--button-link: #5048e5;
+	--hover: #463acb;
+	--border: #e5e7eb;
+	--card-background: #ffffff;
 }
-
-
-/*
-  Light Mode Colors
-	--color-background-light: #f9fafb;
-	--color-primary-text-light: #1f2937;
-	--color-secondary-text-light: #6b7280;
-	--color-button-link-light: #5048e5;
-	--color-hover-light: #463acb;
-	--color-border-light: #e5e7eb;
-	--color-card-background-light: #ffffff;
-
-  Dark Mode Colors
-	--color-background-dark: #111827;
-	--color-primary-text-dark: #f3f4f6;
-	--color-secondary-text-dark: #9ca3b0;
-	--color-button-link-dark: #6467f2;
-	--color-hover-dark: #828df8;
-	--color-border-dark: #384252;
-	--color-card-background-dark: #1f2937; 
-  */
 
 * {
 	margin: 0;

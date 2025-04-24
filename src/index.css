@@ -31,66 +31,75 @@
 	--card-background: #ffffff;
 }
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+@layer base {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	
+	/* Hero Heading (h1) */
+	.hero-heading {
+		font-family: 'Poppins', sans-serif;
+		font-size: 3rem;
+		font-weight: 700;
+		font-style: normal;
+		line-height: 1.5;
+	}
+	
+	/* Section Headings (h2) */
+	.section-heading {
+		font-family: 'Poppins', sans-serif;
+		font-size: 2rem;
+		font-weight: 600;
+		font-style: normal;
+		line-height: 1.5;
+	}
+	
+	/* Subheading (h3) */
+	.subheading {
+		font-family: 'Poppins', sans-serif;
+		font-size: 1.5rem;
+		font-weight: 500;
+		font-style: normal;
+		line-height: 1.5;
+	}
+	
+	/* Project Titles (h4) */
+	.project-title {
+		font-family: 'Poppins', sans-serif;
+		font-size: 1.25rem;
+		font-weight: 600;
+		font-style: normal;
+		line-height: 1.5;
+	}
+	
+	/* Normal Text (p, span) */
+	.normal-text {
+		font-family: 'Roboto', sans-serif;
+		font-size: 1rem;
+		font-optical-sizing: auto;
+		font-weight: 400;
+		font-style: normal;
+		font-variation-settings: 'wdth' 100;
+		line-height: 1.5;
+	}
+	
+	/* Caption Text (p, span) */
+	.caption {
+		font-family: 'Roboto', sans-serif;
+		font-size: 0.875rem;
+		font-optical-sizing: auto;
+		font-weight: 400;
+		font-style: normal;
+		font-variation-settings: 'wdth' 100;
+		line-height: 1.5;
+	}
 }
 
-/* Hero Heading (h1) */
-.hero-heading {
-	font-family: 'Poppins', sans-serif;
-	font-size: 3rem;
-	font-weight: 700;
-	font-style: normal;
-	line-height: 1.5;
-}
-
-/* Section Headings (h2) */
-.section-heading {
-	font-family: 'Poppins', sans-serif;
-	font-size: 2rem;
-	font-weight: 600;
-	font-style: normal;
-	line-height: 1.5;
-}
-
-/* Subheading (h3) */
-.subheading {
-	font-family: 'Poppins', sans-serif;
-	font-size: 1.5rem;
-	font-weight: 500;
-	font-style: normal;
-	line-height: 1.5;
-}
-
-/* Project Titles (h4) */
-.project-title {
-	font-family: 'Poppins', sans-serif;
-	font-size: 1.25rem;
-	font-weight: 600;
-	font-style: normal;
-	line-height: 1.5;
-}
-
-/* Normal Text (p, span) */
-.normal-text {
-	font-family: 'Roboto', sans-serif;
-	font-size: 1rem;
-	font-optical-sizing: auto;
-	font-weight: 400;
-	font-style: normal;
-	font-variation-settings: 'wdth' 100;
-	line-height: 1.5;
-}
-
-/* Caption Text (p, span) */
-.caption {
-	font-family: 'Roboto', sans-serif;
-	font-size: 0.875rem;
-	font-optical-sizing: auto;
-	font-weight: 400;
-	font-style: normal;
-	font-variation-settings: 'wdth' 100;
-	line-height: 1.5;
-}

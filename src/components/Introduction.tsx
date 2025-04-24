@@ -1,0 +1,83 @@
+import { IconType } from 'react-icons';
+import { Icon } from './Icon';
+import {
+	SiHtml5,
+	SiCss3,
+	SiJavascript,
+	SiAngular,
+	SiPython,
+	SiReact,
+	SiExpress,
+	SiEjs,
+	SiTypescript,
+	SiGo,
+	SiVuedotjs,
+	SiMongodb,
+	SiTailwindcss,
+	SiJest,
+	SiJasmine,
+	SiGit,
+} from 'react-icons/si';
+
+import Slider from 'react-slick';
+
+const iconLanguage: { language: string; icon: IconType }[] = [
+	{ language: 'HTML', icon: SiHtml5 },
+	{ language: 'CSS', icon: SiCss3 },
+	{ language: 'Tailwind', icon: SiTailwindcss },
+	{ language: 'Javascript', icon: SiJavascript },
+	{ language: 'Typescript', icon: SiTypescript },
+	{ language: 'Angular', icon: SiAngular },
+	{ language: 'React', icon: SiReact },
+	{ language: 'Vue', icon: SiVuedotjs },
+	{ language: 'Express.js', icon: SiExpress },
+	{ language: 'EJS', icon: SiEjs },
+	{ language: 'Python', icon: SiPython },
+	{ language: 'Go', icon: SiGo },
+	{ language: 'MongoDB', icon: SiMongodb },
+	{ language: 'Jest', icon: SiJest },
+	{ language: 'Jasmine', icon: SiJasmine },
+	{ language: 'Git', icon: SiGit },
+];
+
+function CustomNextArrow(props: any) {
+	const { className, style, onClick } = props;
+	return (
+		<div
+			className={className}
+			style={{ ...style, display: 'none' }}
+			onClick={onClick}
+		/>
+	);
+}
+
+function CustomPrevArrow(props: any) {
+	const { className, style, onClick } = props;
+	return <div className={className} style={{ ...style, display: 'none' }} onClick={onClick} />;
+}
+
+export const Introduction = () => {
+	let settings = {
+		infinite: true,
+		speed: 2000,
+		slidesToShow: 7,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 1,
+		centerPadding: '75px',
+		cssEase: 'linear',
+		nextArrow: <CustomNextArrow />,
+		prevArrow: <CustomPrevArrow />
+	};
+
+	return (
+		<div className="flex flex-col gap-2 w-2xl">
+			<h1 className="hero-heading text-primary-text">Hi, I'm Santiago Orozco</h1>
+			<Slider {...settings}>
+				{iconLanguage.map((pair, index) => {
+					return <Icon icon={<pair.icon size={25} />} language={pair.language} key={index} />;
+				})}
+			</Slider>
+		</div>
+	);
+};

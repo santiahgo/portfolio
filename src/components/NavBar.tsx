@@ -1,7 +1,7 @@
 export const NavBar = () => {
 	return (
-		<nav className="flex justify-end py-3">
-			<ul className="flex gap-4 me-5">
+		<nav className="flex justify-end pt-5">
+			<ul className="flex gap-4">
 				<a href="#" className="text-button-link normal-text px-3 py-4">
 					<li>Experience</li>
 				</a>

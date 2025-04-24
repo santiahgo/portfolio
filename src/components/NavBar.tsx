@@ -1,4 +1,4 @@
-export function NavBar() {
+export const NavBar = () => {
 	return (
 		<nav className="flex justify-end py-3">
 			<ul className="flex gap-4 me-5">

@@ -43,7 +43,7 @@
 		padding: 0;
 		box-sizing: border-box;
 	}
-	
+
 	/* Hero Heading (h1) */
 	.hero-heading {
 		font-family: 'Poppins', sans-serif;
@@ -52,7 +52,7 @@
 		font-style: normal;
 		line-height: 1.5;
 	}
-	
+
 	/* Section Headings (h2) */
 	.section-heading {
 		font-family: 'Poppins', sans-serif;
@@ -61,7 +61,7 @@
 		font-style: normal;
 		line-height: 1.5;
 	}
-	
+
 	/* Subheading (h3) */
 	.subheading {
 		font-family: 'Poppins', sans-serif;
@@ -70,7 +70,7 @@
 		font-style: normal;
 		line-height: 1.5;
 	}
-	
+
 	/* Project Titles (h4) */
 	.project-title {
 		font-family: 'Poppins', sans-serif;
@@ -79,7 +79,7 @@
 		font-style: normal;
 		line-height: 1.5;
 	}
-	
+
 	/* Normal Text (p, span) */
 	.normal-text {
 		font-family: 'Roboto', sans-serif;
@@ -90,7 +90,7 @@
 		font-variation-settings: 'wdth' 100;
 		line-height: 1.5;
 	}
-	
+
 	/* Caption Text (p, span) */
 	.caption {
 		font-family: 'Roboto', sans-serif;
@@ -102,4 +102,3 @@
 		line-height: 1.5;
 	}
 }
-

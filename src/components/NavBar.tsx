@@ -1,8 +1,8 @@
-import logo from '../assets/images/Santiago.svg'
+import logo from '../assets/images/Santiago.svg';
 
 export const NavBar = () => {
 	return (
-		<nav className="flex justify-between items-center pt-8">
+		<nav className="flex items-center justify-between pt-8">
 			<div>
 				<a href="#">
 					<img src={logo} alt="logo" />
@@ -21,4 +21,4 @@ export const NavBar = () => {
 			</ul>
 		</nav>
 	);
-}
+};

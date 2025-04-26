@@ -6,9 +6,18 @@ function App() {
 	return (
 		<ThemeProvider>
 			<div className="bg-background min-h-screen w-screen">
-				<div className='w-7xl m-auto'>
+				<div className="m-auto w-7xl">
 					<NavBar />
-					<Introduction />
+					<div className="flex gap-10">
+						<div className='w-full mt-9'>
+							<Introduction />
+						</div>
+						<div className='flex justify-center w-full'>
+							{/* 
+								gonna have experience, projects, and contact components
+							*/}
+						</div>
+					</div>
 				</div>
 			</div>
 		</ThemeProvider>

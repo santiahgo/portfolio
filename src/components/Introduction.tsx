@@ -42,13 +42,7 @@ const iconLanguage: { language: string; icon: IconType }[] = [
 
 function CustomNextArrow(props: any) {
 	const { className, style, onClick } = props;
-	return (
-		<div
-			className={className}
-			style={{ ...style, display: 'none' }}
-			onClick={onClick}
-		/>
-	);
+	return <div className={className} style={{ ...style, display: 'none' }} onClick={onClick} />;
 }
 
 function CustomPrevArrow(props: any) {
@@ -67,17 +61,30 @@ export const Introduction = () => {
 		centerPadding: '75px',
 		cssEase: 'linear',
 		nextArrow: <CustomNextArrow />,
-		prevArrow: <CustomPrevArrow />
+		prevArrow: <CustomPrevArrow />,
 	};
 
 	return (
-		<div className="flex flex-col gap-2 w-2xl">
-			<h1 className="hero-heading text-primary-text">Hi, I'm Santiago Orozco</h1>
-			<Slider {...settings}>
-				{iconLanguage.map((pair, index) => {
-					return <Icon icon={<pair.icon size={25} />} language={pair.language} key={index} />;
-				})}
-			</Slider>
+		<div className="flex w-xl flex-col gap-3">
+			<div className="flex flex-col gap-2">
+				<h1 className="hero-heading text-primary-text">Hi, I'm Santiago Orozco</h1>
+				<Slider {...settings}>
+					{iconLanguage.map((pair, index) => {
+						return (
+							<Icon
+								icon={<pair.icon size={22} />}
+								language={pair.language}
+								key={index}
+							/>
+						);
+					})}
+				</Slider>
+			</div>
+			<div className="caption text-secondary-text">
+				<p>
+					I am a recent Bachelor of Science in Computer Science graduate with a minor in Mathematics. I have experience in several languages such as Javascript, Typescript, HTML, CSS, Python, and Java. I am passionate frontend engineer who isn't afraid to tackle new problems.
+				</p>
+			</div>
 		</div>
 	);
 };

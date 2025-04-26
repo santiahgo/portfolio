@@ -92,7 +92,7 @@ export const Introduction = () => {
 					</p>
 				</div>
 			</div>
-			<div className="text-border flex gap-4">
+			<div className="text-button-link flex gap-4">
 				<a
 					href="https://www.linkedin.com/in/sorozcob/"
 					target="_blank"

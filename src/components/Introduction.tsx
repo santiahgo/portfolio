@@ -17,6 +17,8 @@ import {
 	SiJest,
 	SiJasmine,
 	SiGit,
+	SiLinkedin,
+	SiGithub,
 } from 'react-icons/si';
 
 import Slider from 'react-slick';
@@ -65,26 +67,49 @@ export const Introduction = () => {
 	};
 
 	return (
-		<div className="flex w-xl flex-col gap-3">
-			<div className="flex flex-col gap-2">
-				<h1 className="hero-heading text-primary-text">Hi, I'm Santiago Orozco</h1>
-				<Slider {...settings}>
-					{iconLanguage.map((pair, index) => {
-						return (
-							<Icon
-								icon={<pair.icon size={22} />}
-								language={pair.language}
-								key={index}
-							/>
-						);
-					})}
-				</Slider>
+		<aside className="flex h-[80vh] w-xl flex-col justify-between">
+			<div className="flex w-xl flex-col gap-3">
+				<div className="flex flex-col gap-2">
+					<h1 className="hero-heading text-primary-text">Santiago Orozco Buri</h1>
+					<Slider {...settings}>
+						{iconLanguage.map((pair, index) => {
+							return (
+								<Icon
+									icon={<pair.icon size={22} />}
+									language={pair.language}
+									key={index}
+								/>
+							);
+						})}
+					</Slider>
+				</div>
+				<div className="caption text-secondary-text">
+					<p>
+						I am a recent Bachelor of Science in Computer Science graduate with a minor
+						in Mathematics. I have experience in several languages such as Javascript,
+						Typescript, HTML, CSS, Python, and Java. I am passionate frontend engineer
+						who isn't afraid to tackle new problems.
+					</p>
+				</div>
 			</div>
-			<div className="caption text-secondary-text">
-				<p>
-					I am a recent Bachelor of Science in Computer Science graduate with a minor in Mathematics. I have experience in several languages such as Javascript, Typescript, HTML, CSS, Python, and Java. I am passionate frontend engineer who isn't afraid to tackle new problems.
-				</p>
+			<div className="text-border flex gap-4">
+				<a
+					href="https://www.linkedin.com/in/sorozcob/"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="hover:text-hover"
+				>
+					<SiLinkedin size={28} />
+				</a>
+				<a
+					href="https://github.com/santiahgo"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="hover:text-hover"
+				>
+					<SiGithub size={28} />
+				</a>
 			</div>
-		</div>
+		</aside>
 	);
 };

@@ -9,10 +9,10 @@ function App() {
 				<div className="m-auto w-7xl">
 					<NavBar />
 					<div className="flex gap-10">
-						<div className='w-full mt-9'>
+						<div className="mt-9 w-full">
 							<Introduction />
 						</div>
-						<div className='flex justify-center w-full'>
+						<div className="flex w-full justify-end">
 							{/* 
 								gonna have experience, projects, and contact components
 							*/}

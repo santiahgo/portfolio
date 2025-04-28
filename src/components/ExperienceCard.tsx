@@ -11,7 +11,7 @@ export const ExperienceCard = ({
 		<div className="border-b-primary-text flex h-min w-full flex-col gap-4 border-b-2 py-4 last:border-b">
 			<div className="flex flex-col gap-2">
 				<div className="flex items-center justify-between">
-					<h4 className="project-title text-primary-text">{title} </h4>
+					<h4 className="project-title text-primary-text">{title}</h4>
 					<span className="text-secondary-text normal-text">
 						{start} - {end}
 					</span>

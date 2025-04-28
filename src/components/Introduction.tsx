@@ -67,7 +67,8 @@ export const Introduction = () => {
 	};
 
 	return (
-		<aside className="flex h-[80vh] w-xl flex-col justify-between">
+		// fixed top-22 left-38
+		<aside className="sticky top-32 flex h-[80vh] w-xl flex-col justify-between">
 			<div className="flex w-xl flex-col gap-3">
 				<div className="flex flex-col gap-2">
 					<h1 className="hero-heading text-primary-text">Santiago Orozco Buri</h1>
@@ -92,7 +93,7 @@ export const Introduction = () => {
 					</p>
 				</div>
 			</div>
-			<div className="text-button-link flex gap-4">
+			<div className="text-border flex gap-4">
 				<a
 					href="https://www.linkedin.com/in/sorozcob/"
 					target="_blank"

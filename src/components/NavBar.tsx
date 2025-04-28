@@ -1,8 +1,27 @@
+import { useEffect, useState } from 'react';
 import logo from '../assets/images/Santiago.svg';
 
 export const NavBar = () => {
+	const [isScrolled, setIsScrolled] = useState(false);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			if (window.scrollY > 0) {
+				setIsScrolled(true);
+			} else {
+				setIsScrolled(false);
+			}
+		};
+
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	});
+
 	return (
-		<nav className="flex items-center justify-between pt-8">
+		<nav className={`sticky z-10 duration-75 ${isScrolled ? 'bg-background' : 'bg-transparent'} transition-colors top-0 flex items-center justify-between py-6`}>
 			<div>
 				<a href="#">
 					<img src={logo} alt="logo" />

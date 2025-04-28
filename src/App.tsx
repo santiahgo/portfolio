@@ -6,7 +6,7 @@ import { Experience } from './components/Experience';
 function App() {
 	return (
 		<ThemeProvider>
-			<div className="bg-background min-h-screen w-screen">
+			<div className="bg-background min-h-screen w-full">
 				<div className="m-auto w-7xl">
 					<NavBar />
 					<div className="mt-9 flex gap-10">

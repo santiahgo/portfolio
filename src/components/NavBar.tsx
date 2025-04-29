@@ -34,9 +34,6 @@ export const NavBar = () => {
 				<a href="#" className="text-button-link normal-text">
 					<li>Projects</li>
 				</a>
-				<a href="#" className="text-button-link normal-text">
-					<li>Contact</li>
-				</a>
 			</ul>
 		</nav>
 	);

@@ -92,6 +92,7 @@ export const Introduction = () => {
 						who isn't afraid to tackle new problems.
 					</p>
 				</div>
+				{/* add contact form here */}
 			</div>
 			<div className="text-border flex gap-4">
 				<a

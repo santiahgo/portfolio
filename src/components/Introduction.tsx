@@ -67,8 +67,7 @@ export const Introduction = () => {
 	};
 
 	return (
-		// fixed top-22 left-38
-		<aside className="sticky top-32 flex h-[80vh] w-xl flex-col justify-between">
+		<div className="sticky top-32 flex h-[80vh] w-xl flex-col justify-between">
 			<div className="flex w-xl flex-col gap-3">
 				<div className="flex flex-col gap-2">
 					<h1 className="hero-heading text-primary-text">Santiago Orozco Buri</h1>
@@ -92,7 +91,7 @@ export const Introduction = () => {
 						who isn't afraid to tackle new problems.
 					</p>
 				</div>
-				{/* add contact form here */}
+				{/* TODO: add contact form here */}
 			</div>
 			<div className="text-border flex gap-4">
 				<a
@@ -112,6 +111,6 @@ export const Introduction = () => {
 					<SiGithub size={28} />
 				</a>
 			</div>
-		</aside>
+		</div>
 	);
 };

@@ -1,9 +1,10 @@
-import gatherly from '../assets/images/gatherly/gatherly.png';
+import gatherly from '../assets/images/gatherly.png';
 import hangout from '../assets/images/49ersHangout.png';
 import dolla from '../assets/images/dolla.png';
+import { ProjectCard } from './ProjectCard';
 
 export const Projects = () => {
-    // 5 projects for now
+	// 5 projects for now
 	let projects: Project[] = [
 		{
 			projectName: 'Gatherly',
@@ -55,4 +56,14 @@ export const Projects = () => {
 			skills: ['JavaScript', 'React.js', 'HTML', 'CSS'],
 		},
 	];
+
+	return (
+		<div className="flex w-full flex-col gap-6 p-0.5">
+			{
+				projects.map(project => {
+					return <ProjectCard {...project} />;
+				})
+			}
+		</div>
+	);
 };

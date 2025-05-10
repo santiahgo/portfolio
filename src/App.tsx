@@ -3,6 +3,7 @@ import { ThemeProvider } from './providers/ThemeProvider';
 import { NavBar } from './components/NavBar';
 import { Introduction } from './components/Introduction';
 import { Experience } from './components/Experience';
+import { Projects } from './components/Projects';
 
 function App() {
 	const [activeLink, setActiveLink] = useState('experience');
@@ -50,7 +51,7 @@ function App() {
 							id="projects"
 							className={`flex w-full ${activeLink === 'projects' ? 'block' : 'hidden'}`}
 						>
-							{/* { activeLink === 'projects' <Projects /> : null } */}
+							{ activeLink === 'projects' ? <Projects /> : null }
 						</section>
 					</div>
 				</div>

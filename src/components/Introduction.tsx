@@ -22,6 +22,7 @@ import {
 } from 'react-icons/si';
 
 import Slider from 'react-slick';
+import { EmailForm } from './EmailForm';
 
 const iconLanguage: { language: string; icon: IconType }[] = [
 	{ language: 'HTML', icon: SiHtml5 },
@@ -83,15 +84,15 @@ export const Introduction = () => {
 						})}
 					</Slider>
 				</div>
-				<div className="caption text-secondary-text">
-					<p>
+				<div className="text-secondary-text">
+					<p className='normal-text'>
 						I am a recent Bachelor of Science in Computer Science graduate with a minor
 						in Mathematics. I have experience in several languages such as Javascript,
 						Typescript, HTML, CSS, Python, and Java. I am passionate frontend engineer
 						who isn't afraid to tackle new problems.
 					</p>
 				</div>
-				{/* TODO: add contact form here */}
+				<EmailForm />
 			</div>
 			<div className="text-border flex gap-4">
 				<a

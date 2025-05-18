@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { IconType } from 'react-icons';
 import { Icon } from './Icon';
 import {
@@ -20,9 +21,9 @@ import {
 	SiLinkedin,
 	SiGithub,
 } from 'react-icons/si';
-
 import Slider from 'react-slick';
 import { EmailForm } from './EmailForm';
+import { useSpring, animated } from '@react-spring/web'
 
 const iconLanguage: { language: string; icon: IconType }[] = [
 	{ language: 'HTML', icon: SiHtml5 },
@@ -54,7 +55,13 @@ function CustomPrevArrow(props: any) {
 }
 
 export const Introduction = () => {
-	let settings = {
+	const [animate, setAnimate] = useState(false);
+
+	useEffect(() => {
+		setAnimate(true);
+	}, [])
+	
+	const carouselSettings = {
 		infinite: true,
 		speed: 2000,
 		slidesToShow: 7,
@@ -67,12 +74,19 @@ export const Introduction = () => {
 		prevArrow: <CustomPrevArrow />,
 	};
 
+	const slideIn = useSpring({
+		opacity: animate ? 1 : 0,
+		transform: animate ? 'translateX(0)' : 'translateX(-100%)',
+		config: { tension: 150, friction: 15 },
+		delay: 500
+	})
+
 	return (
-		<div className="sticky top-32 flex h-[80vh] w-xl flex-col justify-between">
+		<animated.div style={slideIn} className="sticky top-32 flex h-[80vh] w-xl flex-col justify-between">
 			<div className="flex w-xl flex-col gap-3">
 				<div className="flex flex-col gap-2">
 					<h1 className="hero-heading text-primary-text">Santiago Orozco Buri</h1>
-					<Slider {...settings}>
+					<Slider {...carouselSettings}>
 						{iconLanguage.map((pair, index) => {
 							return (
 								<Icon
@@ -112,6 +126,6 @@ export const Introduction = () => {
 					<SiGithub size={28} />
 				</a>
 			</div>
-		</div>
+		</animated.div>
 	);
 };

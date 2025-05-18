@@ -1,36 +1,40 @@
-import { useEffect, useState, useCallback } from 'react';
-import { ThemeProvider } from './providers/ThemeProvider';
-import { NavBar } from './components/NavBar';
-import { Introduction } from './components/Introduction';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Experience } from './components/Experience';
+import { Introduction } from './components/Introduction';
+import { NavBar } from './components/NavBar';
 import { Projects } from './components/Projects';
+import { ThemeProvider } from './providers/ThemeProvider';
 
 function App() {
 	const [activeLink, setActiveLink] = useState('experience');
+	const isFirstRender = useRef(true);
 
-	const handleSetActiveLink = useCallback((link: string) => {
-		setActiveLink(link);
-	}, [activeLink]);
-	
+	const handleSetActiveLink = useCallback(
+		(link: string) => {
+			setActiveLink(link);
+		},
+		[activeLink]
+	);
+
 	useEffect(() => {
-		const observer = new IntersectionObserver(
-			entries => {
-				entries.forEach(entry => {
-					if (entry.isIntersecting) {
-						setActiveLink(entry.target.id);
-					}
-				});
-			}
-		);
-
-		document.querySelectorAll('section').forEach(section => {
-			observer.observe(section);
-		});
-
-		return () => {
-			observer.disconnect();
-		};
+		isFirstRender.current = false;
 	}, []);
+
+	const styles = {
+		initial: {
+			opacity: 0,
+			x: 100,
+		},
+		animate: {
+			opacity: 1,
+			x: 0,
+		},
+		exit: {
+			opacity: 0,
+			x: -100,
+		},
+	};
 
 	return (
 		<ThemeProvider>
@@ -41,17 +45,45 @@ function App() {
 						<aside className="w-full">
 							<Introduction />
 						</aside>
-						<section
-							id="experience"
-							className={`flex w-full ${activeLink === 'experience' ? 'block' : 'hidden'}`}
-						>
-							{activeLink === 'experience' ? <Experience /> : null}
-						</section>
-						<section
-							id="projects"
-							className={`flex w-full ${activeLink === 'projects' ? 'block' : 'hidden'}`}
-						>
-							{ activeLink === 'projects' ? <Projects /> : null }
+						<section className="flex w-full overflow-hidden">
+							<AnimatePresence mode="wait">
+								{activeLink === 'experience' && (
+									<motion.div
+										key="experience"
+										variants={styles}
+										initial="initial"
+										animate="animate"
+										exit="exit"
+										transition={{
+											duration: 0.5,
+											type: 'spring',
+											bounce: 0.2,
+											delay: isFirstRender.current ? 0.5 : 0,
+										}}
+										className="block"
+									>
+										<Experience />
+									</motion.div>
+								)}
+								{activeLink === 'projects' && (
+									<motion.div
+										key="projects"
+										variants={styles}
+										initial="initial"
+										animate="animate"
+										exit="exit"
+										transition={{
+											duration: 0.5,
+											type: 'spring',
+											bounce: 0.2,
+											delay: isFirstRender.current ? 0.5 : 0,
+										}}
+										className="block"
+									>
+										<Projects />
+									</motion.div>
+								)}
+							</AnimatePresence>
 						</section>
 					</div>
 				</div>

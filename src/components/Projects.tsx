@@ -9,7 +9,7 @@ export const Projects = () => {
 		{
 			projectName: 'Gatherly',
 			description:
-				'An event hosting application to make it easy to rent out and rent space for events in the United States.',
+				'An event hosting application to make it easy to rent and rent out spaces for events in the United States.',
 			image: gatherly,
 			github: 'https://github.com/ITSC-4155-Group-1/4155-Project',
 			skills: [

@@ -106,8 +106,8 @@ export const Introduction = () => {
 						who isn't afraid to tackle new problems.
 					</p>
 				</div>
-				<EmailForm />
 			</div>
+			<EmailForm />
 			<div className="text-border flex gap-4">
 				<a
 					href="https://www.linkedin.com/in/sorozcob/"

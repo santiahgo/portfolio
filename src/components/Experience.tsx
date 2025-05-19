@@ -40,7 +40,7 @@ export const Experience = () => {
 				'Attended daily scrum meetings to discuss stories',
 				"Utilized Angular.js structural directives to conditionally display information based on the user's JWT token",
 				'Implemented unit tests with Jest/Jasmine and end-to-end tests using Cypress/Cucumber, verifying solutions adhered to coding standards',
-				'Designed and implemented an interactive UI with Streamlit, incorporating dynamic data extractedfrom articles using prompt engineering',
+				'Designed and implemented an interactive UI with Streamlit, incorporating dynamic data extracted from articles using prompt engineering',
 			],
 			location: 'Charlotte, NC',
 			start: 'June 2024',

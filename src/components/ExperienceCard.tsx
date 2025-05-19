@@ -10,7 +10,7 @@ export const ExperienceCard = ({
 	return (
 		<div
 			key={start}
-			className="border-b-primary-text flex h-min w-full flex-col gap-4 border-b-2 py-4 last:border-b"
+			className="border-b-primary-text flex h-min w-full flex-col gap-4 border-b-2 py-4 last:border-b-0"
 		>
 			<div className="flex flex-col gap-2">
 				<div className="flex items-center justify-between">

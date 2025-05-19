@@ -12,7 +12,7 @@ export const Experience = () => {
 			],
 			location: 'Charlotte, NC',
 			start: 'August 2023',
-			end: 'Present',
+			end: 'May 2025',
 			skills: [
 				'Java',
 				'Python',

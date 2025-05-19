@@ -19,6 +19,12 @@
 	--hover: #828df8;
 	--border: #384252;
 	--card-background: #1f2937;
+	.Toastify__progress-bar--success {
+		background-color: var(--button-link);
+	}
+	.Toastify__toast--success .Toastify__toast-icon {
+		--toastify-icon-color-success: var(--button-link);
+	}
 }
 
 [data-theme='light'] {
@@ -29,6 +35,12 @@
 	--hover: #463acb;
 	--border: #e5e7eb;
 	--card-background: #ffffff;
+	.Toastify__progress-bar-success {
+		color: var(--button-link);
+	}
+	.Toastify__toast--success .Toastify__toast-icon {
+		--toastify-icon-color-success: var(--button-link);
+	}
 }
 
 @layer base {

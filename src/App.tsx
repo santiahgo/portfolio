@@ -4,7 +4,6 @@ import { Experience } from './components/Experience';
 import { Introduction } from './components/Introduction';
 import { NavBar } from './components/NavBar';
 import { Projects } from './components/Projects';
-import { ThemeProvider } from './providers/ThemeProvider';
 
 function App() {
 	const [activeLink, setActiveLink] = useState('experience');
@@ -37,58 +36,56 @@ function App() {
 	};
 
 	return (
-		<ThemeProvider>
-			<div className="bg-background min-h-screen w-full">
-				<div className="m-auto w-7xl">
-					<NavBar active={activeLink} handleSetActiveLink={handleSetActiveLink} />
-					<div className="mt-9 flex gap-10">
-						<aside className="w-full">
-							<Introduction />
-						</aside>
-						<section className="flex w-full overflow-hidden">
-							<AnimatePresence mode="wait">
-								{activeLink === 'experience' && (
-									<motion.div
-										key="experience"
-										variants={styles}
-										initial="initial"
-										animate="animate"
-										exit="exit"
-										transition={{
-											duration: 0.5,
-											type: 'spring',
-											bounce: 0.2,
-											delay: isFirstRender.current ? 0.5 : 0,
-										}}
-										className="block"
-									>
-										<Experience />
-									</motion.div>
-								)}
-								{activeLink === 'projects' && (
-									<motion.div
-										key="projects"
-										variants={styles}
-										initial="initial"
-										animate="animate"
-										exit="exit"
-										transition={{
-											duration: 0.5,
-											type: 'spring',
-											bounce: 0.2,
-											delay: isFirstRender.current ? 0.5 : 0,
-										}}
-										className="block"
-									>
-										<Projects />
-									</motion.div>
-								)}
-							</AnimatePresence>
-						</section>
-					</div>
+		<div className="bg-background min-h-screen w-full">
+			<div className="m-auto w-7xl">
+				<NavBar active={activeLink} handleSetActiveLink={handleSetActiveLink} />
+				<div className="mt-9 flex gap-10">
+					<aside className="w-full">
+						<Introduction />
+					</aside>
+					<section className="flex w-full overflow-hidden">
+						<AnimatePresence mode="wait">
+							{activeLink === 'experience' && (
+								<motion.div
+									key="experience"
+									variants={styles}
+									initial="initial"
+									animate="animate"
+									exit="exit"
+									transition={{
+										duration: 0.5,
+										type: 'spring',
+										bounce: 0.2,
+										delay: isFirstRender.current ? 0.5 : 0,
+									}}
+									className="block"
+								>
+									<Experience />
+								</motion.div>
+							)}
+							{activeLink === 'projects' && (
+								<motion.div
+									key="projects"
+									variants={styles}
+									initial="initial"
+									animate="animate"
+									exit="exit"
+									transition={{
+										duration: 0.5,
+										type: 'spring',
+										bounce: 0.2,
+										delay: isFirstRender.current ? 0.5 : 0,
+									}}
+									className="block"
+								>
+									<Projects />
+								</motion.div>
+							)}
+						</AnimatePresence>
+					</section>
 				</div>
 			</div>
-		</ThemeProvider>
+		</div>
 	);
 }
 

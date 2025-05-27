@@ -16,8 +16,8 @@ export const ThemeModeToggle = () => {
 			htmlFor="theme-toggle"
 			className="bg-button-link relative inline-flex h-9 w-20 cursor-pointer items-center justify-between rounded-full px-2"
 		>
-			<GoSun className="z-10 text-yellow-400 translate-x-0.5" />
-			<GoMoon className="z-10 text-indigo-400 -translate-x-1.5" />
+			<GoSun className="z-10 translate-x-0.5 text-yellow-400" />
+			<GoMoon className="z-10 -translate-x-1.5 text-indigo-400" />
 
 			<input
 				type="checkbox"

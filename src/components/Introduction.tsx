@@ -113,7 +113,7 @@ export const Introduction = () => {
 					href="https://www.linkedin.com/in/sorozcob/"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="hover:text-hover"
+					className="text-secondary-text hover:text-hover"
 				>
 					<SiLinkedin size={28} />
 				</a>
@@ -121,7 +121,7 @@ export const Introduction = () => {
 					href="https://github.com/santiahgo"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="hover:text-hover"
+					className="text-secondary-text hover:text-hover"
 				>
 					<SiGithub size={28} />
 				</a>

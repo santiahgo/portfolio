@@ -122,7 +122,7 @@ export const EmailForm = () => {
 				</div>
 				<button
 					type="submit"
-					className="border-hover text-hover hover:bg-hover hover:text-primary-text rounded border py-2 transition-all duration-200 ease-in-out hover:cursor-pointer disabled:cursor-not-allowed"
+					className="border-hover text-hover hover:bg-hover hover:text-background dark:hover:text-primary-text rounded border py-2 transition-all duration-200 ease-in-out hover:cursor-pointer disabled:cursor-not-allowed"
 					disabled={buttonDisabled}
 				>
 					{buttonDisabled ? 'Please wait...' : 'Send'}

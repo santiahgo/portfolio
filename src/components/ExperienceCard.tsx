@@ -39,7 +39,7 @@ export const ExperienceCard = ({
 						{skills.map((skill, index) => (
 							<li
 								key={index}
-								className="text-secondary-text normal-text bg-card-background hover:bg-hover hover:text-primary-text rounded-md px-2 py-1 transition-all duration-200 ease-in-out"
+								className="text-secondary-text normal-text bg-card-background hover:bg-hover hover:text-background dark:hover:text-primary-text rounded-md px-2 py-1 transition-all duration-200 ease-in-out"
 							>
 								{skill}
 							</li>

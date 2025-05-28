@@ -31,9 +31,7 @@ export const NavBar = ({ active, handleSetActiveLink }: NavBarProps) => {
 			className={`sticky z-10 duration-75 ${isScrolled ? 'bg-background' : 'bg-transparent'} top-0 flex items-center justify-between py-6 transition-colors`}
 		>
 			<div>
-				<a href="#">
-					<img src={logo} alt="logo" />
-				</a>
+				<img src={logo} alt="logo" />
 			</div>
 			<div className="flex items-center gap-9">
 				<ul className="flex gap-9">

@@ -36,7 +36,7 @@ function App() {
 	};
 
 	return (
-		<div className="bg-background min-h-screen w-full">
+		<div className="bg-background w-full">
 			<div className="m-auto w-7xl">
 				<NavBar active={activeLink} handleSetActiveLink={handleSetActiveLink} />
 				<div className="mt-9 flex gap-10">

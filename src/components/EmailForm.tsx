@@ -62,67 +62,67 @@ export const EmailForm = () => {
 	};
 
 	return (
-		<div className="bg-card-background rounded p-4">
-			<h2 className="text-primary-text subheading mb-1">Contact Me</h2>
+		<div className="bg-card-background mx-auto w-full rounded p-4 sm:p-6">
+			<h2 className="text-primary-text mb-4 text-xl font-semibold sm:text-2xl">Contact Me</h2>
 			<form
 				onSubmit={handleSubmit(onSubmit)}
 				className="flex flex-col gap-4"
 				autoComplete="off"
 			>
 				<div className="flex flex-col">
-					<label htmlFor="subject" className="text-primary-text mb-1">
+					<label
+						htmlFor="subject"
+						className="text-primary-text mb-1 text-sm sm:text-base"
+					>
 						Subject
 					</label>
 					<input
 						type="text"
-						className="border-secondary-text text-primary-text focus:border-hover rounded border p-1 outline-none"
+						className="border-secondary-text text-primary-text focus:border-hover w-full rounded border p-1 text-sm outline-none sm:text-base"
 						{...register('subject', { required: 'PLease enter a subject...' })}
 						placeholder="Networking"
 					/>
 					{errors.subject && (
-						<p className="mt-1 mb-1 text-sm text-red-500">
-							Please provide a subject...
-						</p>
+						<p className="mt-1 text-sm text-red-500">Please provide a subject...</p>
 					)}
 				</div>
 
 				<div className="flex flex-col">
-					<label htmlFor="name" className="text-primary-text mb-1">
+					<label htmlFor="name" className="text-primary-text mb-1 text-sm sm:text-base">
 						Full Name
 					</label>
 					<input
 						type="text"
-						className="border-secondary-text focus:border-hover text-primary-text rounded border p-1 outline-none"
+						className="border-secondary-text text-primary-text focus:border-hover w-full rounded border p-1 text-sm outline-none sm:text-base"
 						{...register('name', { required: 'Please enter your name...' })}
 						placeholder="John Doe"
 					/>
 					{errors.name && (
-						<p className="mt-1 mb-1 text-sm text-red-500">
-							Please provide your name...
-						</p>
+						<p className="mt-1 text-sm text-red-500">Please provide your name...</p>
 					)}
 				</div>
 
 				<div className="flex flex-col">
-					<label htmlFor="message" className="text-primary-text mb-1">
+					<label
+						htmlFor="message"
+						className="text-primary-text mb-1 text-sm sm:text-base"
+					>
 						Message (max 100 characters)
 					</label>
 					<textarea
 						{...register('message', { required: 'PLease provide details...' })}
 						placeholder="I would love to connect with you!"
-						className="border-secondary-text text-primary-text focus:border-hover resize-none rounded border p-1 outline-none"
+						className="border-secondary-text text-primary-text focus:border-hover w-full rounded border p-1 text-sm outline-none sm:text-base"
 						rows={5}
 						maxLength={100}
 					/>
 					{errors.message && (
-						<p className="mt-1 mb-1 text-sm text-red-500">
-							Please provide a message...
-						</p>
+						<p className="mt-1 text-sm text-red-500">Please provide a message...</p>
 					)}
 				</div>
 				<button
 					type="submit"
-					className="border-hover text-hover hover:bg-hover hover:text-background dark:hover:text-primary-text rounded border py-2 transition-all duration-200 ease-in-out hover:cursor-pointer disabled:cursor-not-allowed"
+					className="border-hover text-hover hover:bg-hover hover:text-background dark:hover:text-primary-text w-full rounded border py-2 text-sm font-medium transition-all duration-200 ease-in-out hover:cursor-pointer disabled:cursor-not-allowed sm:text-base"
 					disabled={buttonDisabled}
 				>
 					{buttonDisabled ? 'Please wait...' : 'Send'}

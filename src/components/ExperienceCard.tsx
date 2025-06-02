@@ -28,7 +28,7 @@ export const ExperienceCard = ({
 					{description.map((desc, index) => (
 						<li
 							key={index}
-							className="text-secondary-text normal-text ml-3.5 list-disc"
+							className="text-secondary-text normal-text ml-4.5 list-disc"
 						>
 							{desc}
 						</li>

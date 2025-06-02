@@ -56,6 +56,10 @@
 		box-sizing: border-box;
 	}
 
+	html {
+		scroll-behavior: smooth;
+	}
+
 	/* Hero Heading (h1) */
 	.hero-heading {
 		font-family: 'Poppins', sans-serif;

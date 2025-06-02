@@ -58,10 +58,8 @@ export const Projects = () => {
 	];
 
 	return (
-		<div className="w-full">
-			<h2 className="text-primary-text text-2xl font-bold sm:text-3xl xl:hidden">
-				Projects
-			</h2>
+		<div className="w-full scroll-mt-[90px]" id="projects">
+			<h2 className="text-primary-text text-2xl font-bold sm:text-3xl xl:hidden">Projects</h2>
 			{projects.map(project => {
 				return <ProjectCard {...project} key={project.projectName} />;
 			})}

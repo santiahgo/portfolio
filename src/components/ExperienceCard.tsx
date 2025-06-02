@@ -13,13 +13,13 @@ export const ExperienceCard = ({
 			className="border-b-primary-text flex h-min w-full flex-col gap-4 border-b-2 py-4 last:border-b-0"
 		>
 			<div className="flex flex-col gap-2">
-				<div className="flex items-center justify-between">
-					<h4 className="project-title text-primary-text">{title}</h4>
-					<span className="text-secondary-text normal-text">
+				<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+					<h4 className="project-title text-primary-text text-base sm:text-lg">{title}</h4>
+					<span className="text-secondary-text text-sm">
 						{start} - {end}
 					</span>
 				</div>
-				<span className="text-secondary-text">
+				<span className="text-secondary-text text-sm sm:text-base">
 					{company} | {location}
 				</span>
 			</div>

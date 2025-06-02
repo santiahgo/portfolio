@@ -29,6 +29,7 @@ export const NavBar = ({ active, handleSetActiveLink }: NavBarProps) => {
 	return (
 		<nav
 			className={`sticky z-10 duration-75 ${isScrolled ? 'bg-background' : 'bg-transparent'} top-0 flex items-center justify-between py-6 transition-colors`}
+			id='navbar'
 		>
 			<div>
 				<img src={logo} alt="logo" />

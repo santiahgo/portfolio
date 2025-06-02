@@ -153,7 +153,7 @@ export const Experience = () => {
 	];
 
 	return (
-		<div className="flex w-full flex-col gap-6 p-0.5">
+		<div className="w-full">
 			{
                 experiences.map(experience => {
                     return <ExperienceCard {...experience} key={experience.start} />

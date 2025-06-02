@@ -36,14 +36,14 @@ function App() {
 	};
 
 	return (
-		<div className="bg-background w-full">
-			<div className="m-auto w-7xl">
+		<div className="bg-background min-h-screen w-full">
+			<div className="mx-auto max-w-screen-xl px-4 sm:px-6 md:px-8">
 				<NavBar active={activeLink} handleSetActiveLink={handleSetActiveLink} />
-				<div className="mt-9 flex gap-10">
-					<aside className="w-full">
+				<div className="mt-8 flex flex-col gap-10 xl:grid xl:grid-cols-2">
+					<aside className="w-full self-start xl:sticky xl:top-[121px]">
 						<Introduction />
 					</aside>
-					<section className="flex w-full overflow-hidden">
+					<section className="w-full">
 						<AnimatePresence mode="wait">
 							{activeLink === 'experience' && (
 								<motion.div
@@ -58,7 +58,7 @@ function App() {
 										bounce: 0.2,
 										delay: isFirstRender.current ? 0.5 : 0,
 									}}
-									className="block"
+									className="w-full"
 								>
 									<Experience />
 								</motion.div>
@@ -76,7 +76,7 @@ function App() {
 										bounce: 0.2,
 										delay: isFirstRender.current ? 0.5 : 0,
 									}}
-									className="block"
+									className="w-full"
 								>
 									<Projects />
 								</motion.div>

@@ -1,29 +1,29 @@
+import { animated, useSpring } from '@react-spring/web';
 import { useEffect, useState } from 'react';
 import { IconType } from 'react-icons';
-import { Icon } from './Icon';
 import {
-	SiHtml5,
-	SiCss3,
-	SiJavascript,
 	SiAngular,
+	SiCss3,
+	SiEjs,
+	SiExpress,
+	SiGit,
+	SiGithub,
+	SiGo,
+	SiHtml5,
+	SiJasmine,
+	SiJavascript,
+	SiJest,
+	SiLinkedin,
+	SiMongodb,
 	SiPython,
 	SiReact,
-	SiExpress,
-	SiEjs,
-	SiTypescript,
-	SiGo,
-	SiVuedotjs,
-	SiMongodb,
 	SiTailwindcss,
-	SiJest,
-	SiJasmine,
-	SiGit,
-	SiLinkedin,
-	SiGithub,
+	SiTypescript,
+	SiVuedotjs,
 } from 'react-icons/si';
 import Slider from 'react-slick';
 import { EmailForm } from './EmailForm';
-import { useSpring, animated } from '@react-spring/web'
+import { Icon } from './Icon';
 
 const iconLanguage: { language: string; icon: IconType }[] = [
 	{ language: 'HTML', icon: SiHtml5 },
@@ -44,78 +44,88 @@ const iconLanguage: { language: string; icon: IconType }[] = [
 	{ language: 'Git', icon: SiGit },
 ];
 
-function CustomNextArrow(props: any) {
-	const { className, style, onClick } = props;
-	return <div className={className} style={{ ...style, display: 'none' }} onClick={onClick} />;
-}
-
-function CustomPrevArrow(props: any) {
-	const { className, style, onClick } = props;
-	return <div className={className} style={{ ...style, display: 'none' }} onClick={onClick} />;
-}
-
 export const Introduction = () => {
 	const [animate, setAnimate] = useState(false);
 
 	useEffect(() => {
 		setAnimate(true);
-	}, [])
-	
+	}, []);
+
 	const carouselSettings = {
 		infinite: true,
-		speed: 2000,
+		speed: 1500,
 		slidesToShow: 7,
 		slidesToScroll: 1,
 		autoplay: true,
 		autoplaySpeed: 1,
-		centerPadding: '75px',
 		cssEase: 'linear',
-		nextArrow: <CustomNextArrow />,
-		prevArrow: <CustomPrevArrow />,
-	};
+		arrows: false,
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 9,
+				},
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 7,
+				},
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 4,
+				},
+			},
+		],
+	};	
 
 	const slideIn = useSpring({
 		opacity: animate ? 1 : 0,
 		transform: animate ? 'translateX(0)' : 'translateX(-100%)',
 		config: { tension: 150, friction: 15 },
-		delay: 500
-	})
+		delay: 500,
+	});
 
 	return (
-		<animated.div style={slideIn} className="sticky top-32 flex h-[80vh] w-xl flex-col justify-between">
-			<div className="flex w-xl flex-col gap-3">
-				<div className="flex flex-col gap-2">
-					<h1 className="hero-heading text-primary-text">Santiago Orozco Buri</h1>
+		<animated.div style={slideIn} className="grid w-full grid-cols-1 gap-6 py-6">
+			<div className="flex flex-col items-start gap-4">
+				<h1 className="text-primary-text text-2xl font-bold sm:text-3xl md:text-4xl">
+					Santiago Orozco Buri
+				</h1>
+
+				<div className="w-full overflow-hidden">
 					<Slider {...carouselSettings}>
-						{iconLanguage.map((pair, index) => {
-							return (
-								<Icon
-									icon={<pair.icon size={22} />}
-									language={pair.language}
-									key={index}
-								/>
-							);
-						})}
+						{iconLanguage.map((pair, index) => (
+							<Icon
+								icon={<pair.icon size={24} />}
+								language={pair.language}
+								key={index}
+							/>
+						))}
 					</Slider>
 				</div>
-				<div className="text-secondary-text">
-					<p className='normal-text'>
-						I am a recent Bachelor of Science in Computer Science graduate with a minor
-						in Mathematics. I have experience in several languages such as Javascript,
-						Typescript, HTML, CSS, Python, and Java. I am passionate frontend engineer
-						who isn't afraid to tackle new problems.
-					</p>
-				</div>
+			</div>
+
+			<div className="text-secondary-text text-sm leading-relaxed sm:text-base">
+				<p>
+					I am a recent Bachelor of Science in Computer Science graduate with a minor in
+					Mathematics. I have experience in several languages such as Javascript,
+					Typescript, HTML, CSS, Python, and Java. I am a frontend engineer who isn't
+					afraid to tackle new problems.
+				</p>
 			</div>
 			<EmailForm />
-			<div className="text-border flex gap-4">
+			<div className="flex justify-start gap-6 pt-2">
 				<a
 					href="https://www.linkedin.com/in/sorozcob/"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="text-secondary-text hover:text-hover"
 				>
-					<SiLinkedin size={28} />
+					<SiLinkedin size={24} />
 				</a>
 				<a
 					href="https://github.com/santiahgo"
@@ -123,7 +133,7 @@ export const Introduction = () => {
 					rel="noopener noreferrer"
 					className="text-secondary-text hover:text-hover"
 				>
-					<SiGithub size={28} />
+					<SiGithub size={24} />
 				</a>
 			</div>
 		</animated.div>

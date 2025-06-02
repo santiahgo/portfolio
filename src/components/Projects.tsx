@@ -58,7 +58,7 @@ export const Projects = () => {
 	];
 
 	return (
-		<div className="flex w-full flex-col gap-6 p-0.5">
+		<div className="w-full">
 			{
 				projects.map(project => {
 					return <ProjectCard {...project} key={project.projectName} />;

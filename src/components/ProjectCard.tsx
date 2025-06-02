@@ -4,31 +4,38 @@ export const ProjectCard = ({ projectName, description, image, github, skills }:
 	return (
 		<div
 			key={projectName}
-			className="border-b-primary-text flex h-min w-full gap-3 border-b-2 py-4 last:border-b-0"
+			className="border-b-primary-text flex w-full flex-col gap-4 border-b-2 py-4 last:border-b-0 sm:flex-row"
 		>
-			<div className="w-60 flex-shrink-0">
+			<div className="w-full flex-shrink-0 sm:w-60">
 				{image ? (
-					<img src={image} alt={projectName} className="mb-4 h-auto w-full rounded" />
+					<img
+						src={image}
+						alt={projectName}
+						className="h-auto w-full rounded object-cover"
+					/>
 				) : (
-					<div className="bg-card-background h-40 w-full flex-shrink-0" />
+					<div className="bg-card-background h-40 w-full rounded" />
 				)}
 			</div>
+
 			<div className="flex flex-col gap-2">
 				<a
 					href={github}
 					target="_blank"
 					rel="noopener noreferrer"
-					className="hover:decoration-primary-text text-primary-text project-title flex items-center gap-2 hover:underline"
+					className="text-primary-text project-title flex items-center gap-2 hover:underline"
 				>
-					<h4>{projectName}</h4>
-					<LuExternalLink />
+					<h4 className="text-base sm:text-lg">{projectName}</h4>
+					<LuExternalLink className="text-sm sm:text-base" />
 				</a>
-				<p className="normal-text text-secondary-text">{description}</p>
+
+				<p className="text-secondary-text text-sm sm:text-base">{description}</p>
+
 				<ul className="flex flex-wrap gap-2">
 					{skills.map((skill, index) => (
 						<li
 							key={index}
-							className="text-secondary-text normal-text bg-card-background hover:bg-hover hover:text-background dark:hover:text-primary-text rounded-md px-2 py-1 transition-all duration-200 ease-in-out"
+							className="text-secondary-text bg-card-background hover:bg-hover hover:text-background dark:hover:text-primary-text rounded-md px-2 py-1 text-xs transition-all duration-200 ease-in-out sm:text-sm"
 						>
 							{skill}
 						</li>

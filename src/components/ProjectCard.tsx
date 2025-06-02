@@ -14,7 +14,11 @@ export const ProjectCard = ({ projectName, description, image, github, skills }:
 						className="h-auto w-full rounded object-cover"
 					/>
 				) : (
-					<div className="bg-card-background h-40 w-full rounded" />
+					<div className="bg-card-background h-40 w-full rounded">
+						<p className='h-full w-full flex items-center justify-center text-primary-text'>
+							No image available
+						</p>
+					</div>
 				)}
 			</div>
 

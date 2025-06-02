@@ -154,6 +154,7 @@ export const Experience = () => {
 
 	return (
 		<div className="w-full">
+			<h2 className='xl:hidden text-primary-text text-2xl sm:text-3xl font-bold'>Experience</h2>
 			{
                 experiences.map(experience => {
                     return <ExperienceCard {...experience} key={experience.start} />

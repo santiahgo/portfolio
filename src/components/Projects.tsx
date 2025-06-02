@@ -59,11 +59,12 @@ export const Projects = () => {
 
 	return (
 		<div className="w-full">
-			{
-				projects.map(project => {
-					return <ProjectCard {...project} key={project.projectName} />;
-				})
-			}
+			<h2 className="text-primary-text text-2xl font-bold sm:text-3xl xl:hidden">
+				Projects
+			</h2>
+			{projects.map(project => {
+				return <ProjectCard {...project} key={project.projectName} />;
+			})}
 		</div>
 	);
 };

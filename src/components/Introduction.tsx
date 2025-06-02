@@ -90,7 +90,7 @@ export const Introduction = () => {
 	});
 
 	return (
-		<animated.div style={slideIn} className="grid w-full grid-cols-1 gap-6 py-6">
+		<animated.div style={slideIn} className="grid w-full grid-cols-1 gap-6">
 			<div className="flex flex-col items-start gap-4">
 				<h1 className="text-primary-text text-2xl font-bold sm:text-3xl md:text-4xl">
 					Santiago Orozco Buri
